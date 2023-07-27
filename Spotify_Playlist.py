@@ -2,8 +2,8 @@ import spotipy
 from spotipy.oauth2 import SpotifyOAuth
 import webbrowser
 
-client_id = "ae798d1560374cfba622c0526ed07c89"
-client_secret = "cbfd29c9409f492ca44765972f369917"
+client_id = "..."
+client_secret = "..."
 redirect_uri = "http://localhost:8888/callback"
 
 sp = spotipy.Spotify(
@@ -29,7 +29,7 @@ if current_playback is not None:
     results = sp.search(song_name, type="track")
     track_uri_here = results["tracks"]["items"][0]["uri"]
 
-    playlist_id = "7mwS6iSBxq6oxjVuA9gFAw"
+    playlist_id = "..."
     track_uri = f"{track_uri_here}"
 
     sp.playlist_add_items(playlist_id, [track_uri])
